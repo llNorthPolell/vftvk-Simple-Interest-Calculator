@@ -18,7 +18,10 @@ function compute()
     if (principalIsNaN)
         alert("Enter a positive number");
     else 
-        result.innerHTML = "If you deposit "+p+", <br/> at an interest rate of "+r+"%. <br/> You will receive an amount of "+output+", <br/> in the year "+endYear
+        result.innerHTML = "If you deposit <span class=\"output\">"+
+        p+"</span>, <br/> at an interest rate of <span class=\"output\">"+
+        r+"</span>%. <br/> You will receive an amount of <span class=\"output\">"+
+        output+"</span>, <br/> in the year <span class=\"output\">"+endYear +"</span>"
     ;
 
 }
