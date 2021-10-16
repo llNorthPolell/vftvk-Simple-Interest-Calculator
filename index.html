@@ -1,16 +1,47 @@
+<!-- Author : Marco Ng -->
+<!DOCTYPE html>
 <html>
-    <head>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <head>      
+        <title>Simple Interest Calculator</title>
+        <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Simple Interest Calculator</h1>
+        <div class="maindiv">
+            <h1><strong>Simple Interest Calculator</strong></h1>
 
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
+            <form>
+                <label>Amount</label>  
+                <input type="text" id="principal" />  
+                <br/><br/>
+                <label>Interest Rate</label> 
+                <input type="range" min=1 max=21 value=10.50 id="rate" step=0.5 onchange="displayRate()"/> 
+                <label id="ratePercent">10.50%</label>
+                <br/><br/>
+                <label>No. of Years</label> 
+                <select type="list" id="years" value="1"> 
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <br/><br/>
+                <button type="button" onclick="compute()">Compute Interest</button>  
+            </form> 
 
-        <button onclick="compute()">Compute</button>
+            <br/>   
+
+            <div id="result"></div>
+            <br/>
+            <footer>&#169; This Calculator belongs to Marco Ng</footer>
+            
+        </div>
     </body>
 </html>
