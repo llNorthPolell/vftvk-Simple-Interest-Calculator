@@ -32,3 +32,12 @@ function displayRate(){
     ratePercent = document.getElementById("ratePercent");
     ratePercent.innerText = rate + "%";
 }
+
+function addYears(){
+    years = document.getElementById("years");
+
+    if (years.children.length ==1)
+        for(let i=2; i<=10; i++)
+            years.innerHTML+="<option value=\""+i+"\">"+i+"</option>";
+    
+}
